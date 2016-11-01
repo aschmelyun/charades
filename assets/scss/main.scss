@@ -1,0 +1,140 @@
+@import "node_modules/endive-scss/src/endive";
+
+body {
+  color: #fff;
+  background: $color-blue-alt;
+}
+.row-packs {
+
+  .pack {
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 24px 0;
+    text-decoration: none;
+
+    &:nth-child(4n+1) {
+      background: $color-red;
+    }
+    &:nth-child(4n+2) {
+      background: $color-blue;
+    }
+    &:nth-child(4n+3) {
+      background: $color-green;
+    }
+    &:nth-child(4n) {
+      background: $color-yellow;
+    }
+  }
+}
+.row-charades {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  &.correct {
+    background: $color-green;
+  }
+  &.incorrect {
+    background: $color-red;
+  }
+
+  .time-left {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .charade {
+    display: none;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.25em;
+    font-size: 64px;
+    padding: 0 32px;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+.row-navigation {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  .nav-correct {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .nav-incorrect {
+    @extend .nav-correct;
+    left: 50%;
+  }
+}
+.row-countdown {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background: $color-blue-alt;
+
+  .time {
+    display: block;
+    position: relative;
+    font-size: 64px;
+    font-weight: bold;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.row-summary {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: $color-blue-alt;
+
+  .summary {
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 24px 0;
+    text-decoration: none;
+
+    &.correct {
+      background: $color-green;
+    }
+    &.incorrect {
+      background: $color-red;
+    }
+  }
+}

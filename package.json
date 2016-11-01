@@ -1,0 +1,33 @@
+{
+  "name": "charades",
+  "version": "1.0.0",
+  "description": "A simple web-app for playing charades",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aschmelyun/charades.git"
+  },
+  "keywords": [
+    "charades"
+  ],
+  "author": "aschmelyun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aschmelyun/charades/issues"
+  },
+  "homepage": "https://github.com/aschmelyun/charades#readme",
+  "devDependencies": {
+    "endive-scss": "^0.9.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.2",
+    "gulp-minify": "0.0.14",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
